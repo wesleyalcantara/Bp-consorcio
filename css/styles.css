@@ -1,0 +1,246 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo as cores principais como variáveis */
+:root {
+    --azul-claro: #00AEEF;
+    --azul-escuro: #003366;
+    --rosa: #FF4081;
+    --cinza-claro: #F4F4F4;
+    --branco: #FFFFFF;
+    --cinza-escuro: #333;
+}
+
+/* ================= Corpo da página ================= */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--azul-escuro);
+    line-height: 1.6;
+}
+
+/* Container principal para centralizar conteúdo */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ================= Estilos do Header ================= */
+header {
+    background-color: var(--azul-claro);
+    color: var(--branco);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+header h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+header .btn-contrate {
+    display: inline-block;
+    background-color: var(--rosa);
+    color: var(--branco);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+header .btn-contrate:hover {
+    background-color: var(--azul-escuro);
+}
+
+/* ================= Seções Gerais ================= */
+section {
+    padding: 40px 5%; /* Reduzindo a margem lateral para centralizar */
+    background-color: var(--branco); /* Mudando a cor de fundo para branca */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 1000px; /* Limitar a largura máxima das seções */
+    margin: 20px auto; /* Centraliza as seções e adiciona espaçamento superior e inferior */
+}
+
+section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: var(--azul-escuro);
+}
+
+.beneficio {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    margin-bottom: 20px; /* Espaço entre os benefícios */
+}
+
+.beneficio h3, .etapas h3 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.beneficio img {
+    margin-right: 15px; /* Espaço entre a imagem e o texto */
+}
+
+.beneficio p, .etapas p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* ================= Depoimentos ================= */
+
+#depoimentos blockquote {
+    font-size: 18px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+#depoimentos cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* ================= Formulário ================= */
+#formulario {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 20px auto; /* Centraliza o formulário */
+}
+
+#formulario h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#formulario label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #666;
+}
+
+#formulario input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+#formulario input:focus {
+    border-color: var(--azul-claro);
+    outline: none;
+}
+
+#formulario button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--rosa);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#formulario button:hover {
+    background-color: #e63973;
+}
+
+.mensagem-feedback {
+    margin-top: 20px;
+    color: #333;
+    font-size: 16px;
+}
+
+/* ================= Footer ================= */
+footer {
+    display: flex;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    text-align:left;
+    padding: 20px 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+/* ================= Estilos das Imagens de Pagamento ================= */
+.img-pagamento {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* ================= Responsividade ================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    #depoimentos blockquote {
+        font-size: 16px;
+    }
+
+    .beneficio h3,
+    .etapas h3 {
+        font-size: 20px;
+    }
+
+
+
+    .img-desktop {
+        display: none; /* Esconder a imagem de desktop por padrão */
+    }
+
+    .img-mobile {
+        display: block; /* Exibir imagem mobile em telas pequenas */
+        max-width: 100%;
+    }
+    
+    @media (min-width: 768px) {
+        .img-desktop {
+            display: block; /* Exibe a imagem de desktop */
+            max-width: 100%;
+        }
+        .img-mobile {
+            display: none; /* Esconde a imagem mobile */
+        }
+    }
+}
