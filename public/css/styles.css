@@ -37,7 +37,7 @@ header {
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     color: var(--branco);
-    padding: 150px 0;
+    padding: 150px 0 50px;
     text-align: center;
 }
 
@@ -212,10 +212,12 @@ footer p {
 @media (max-width: 768px) {
     header {
         background-image: url('../imgs/Pag-GUT-(mobile-2).png'); /* Imagem para mobile */
+        background-size: cover;
+        padding-bottom: 50px;
     }
 
     header h1 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     section h2 {
