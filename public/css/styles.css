@@ -211,7 +211,7 @@ footer p {
 /* ================= Responsividade ================= */
 @media (max-width: 768px) {
     header {
-        background-image: url('/public/imgs/Pag-GUT-(mobile-2).png'); /* Imagem para mobile */
+        background-image: url('../imgs/Pag-GUT-(mobile-2).png'); /* Imagem para mobile */
     }
 
     header h1 {
