@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "express": "^4.21.1",
-    "firebase": "^10.14.1"
+    "firebase": "^10.14.1",
+    "projeto": "file:"
   },
   "name": "projeto",
   "description": "Teste para vaga Bem Protege",

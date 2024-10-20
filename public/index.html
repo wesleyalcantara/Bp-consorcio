@@ -6,15 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Landing page para capturar leads para Bp Consórcio">
     <title>Bp Consórcio - Conquiste seus Objetivos</title>
-    
-    <!-- Link do CSS -->
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Fontes do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header com logo e chamada -->
     <header>
         <div class="container">
             <img src="imgs/logo.png" alt="Logo Bp Consórcio">
@@ -95,7 +90,6 @@
         <div class="container">
             <h2>Depoimentos de quem já conquistou com a Bp</h2>
             
-            <!-- Exemplos de depoimentos -->
             <blockquote>
                 <p>"Graças à Bp Consórcio, consegui comprar meu carro sem juros e com parcelas que cabiam no meu bolso!"</p>
                 <cite>— João Silva</cite>
@@ -108,19 +102,11 @@
         </div>
     </section>
 
-    <!-- Imagens de publicidade -->
-<!--     <section>
-        <div class="container">
-            <img src="imgs/Pag-GUT-(2).png" alt="Imagem Desktop" class="img-desktop">
-            <img src="imgs/Pag-GUT-(mobile-2).png" alt="Imagem Mobile" class="img-mobile">
-        </div>
-    </section> -->
-
     <!-- Seção 4: Formulário de Captura de Leads -->
     <section id="formulario">
         <div class="container">
             <h2>Preencha o formulário para mais informações</h2>
-            <form id="leadForm" action="/lead" method="POST">
+            <form id="leadForm" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
 
@@ -136,67 +122,7 @@
         </div>
     </section>
 
-    <!-- Importando o Firebase App e Firestore -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
-        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-firestore.js";
-
-        // Configurações do Firebase
-        const firebaseConfig = {
-            apiKey: "AIzaSyC-o23t9SasKTsIe2pYzzkkQ5cf9m_bI2o",
-            authDomain: "bp-consorcio.firebaseapp.com",
-            projectId: "bp-consorcio",
-            storageBucket: "bp-consorcio.appspot.com",
-            messagingSenderId: "528675178490",
-            appId: "1:528675178490:web:1e9509de65958851154643",
-            measurementId: "G-XE3JKW5TGQ"
-        };
-
-        // Inicializando o Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app); // Inicializa o Firestore
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("leadForm");
-            const feedback = document.querySelector(".mensagem-feedback");
-            feedback.setAttribute("aria-live", "polite");
-
-            form.addEventListener("submit", async function (event) {
-                event.preventDefault(); // Impede o envio padrão do formulário
-
-                // Capturando os dados do formulário
-                const nome = document.getElementById("nome").value.trim();
-                const email = document.getElementById("email").value.trim();
-                const telefone = document.getElementById("telefone").value.trim();
-
-                // Validação dos campos
-                if (nome === "" || email === "" || telefone === "") {
-                    feedback.textContent = "Por favor, preencha todos os campos.";
-                    feedback.style.color = "red";
-                    return;
-                }
-
-                console.log("Enviando dados:", { nome, email, telefone });
-
-                // Adicionando os dados ao Firestore
-                try {
-                    await addDoc(collection(db, "leads"), {
-                        nome: nome,
-                        email: email,
-                        telefone: telefone,
-                        timestamp: serverTimestamp()  // Adiciona a data/hora do envio
-                    });
-
-                    feedback.textContent = "Formulário enviado com sucesso! Em breve um dos nossos consultores entrará em contato.";
-                    feedback.style.color = "green";
-                    form.reset();
-                } catch (error) {
-                    feedback.textContent = "Erro ao enviar o formulário. Tente novamente.";
-                    feedback.style.color = "red";
-                    console.error("Erro ao adicionar documento: ", error.message || error);
-                }
-            });
-        });
-    </script>
+    <!-- Importando o script.js -->
+    <script type="module" src="/js/script.js"></script>
 </body>
 </html>
