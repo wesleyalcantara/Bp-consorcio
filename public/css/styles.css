@@ -32,7 +32,7 @@ body {
 
 /* ================= Estilos do Header ================= */
 header {
-    background-image: url('/public/imgs/Pag-GUT-(2).png'); /* Imagem padrão */
+    background-image: url('public/imgs/Pag-GUT-(2).png'); /* Imagem padrão */
     background-size: cover; /* Faz a imagem cobrir todo o header */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
